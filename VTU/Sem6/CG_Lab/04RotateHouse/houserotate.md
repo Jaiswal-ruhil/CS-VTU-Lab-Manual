@@ -76,6 +76,8 @@
 	void display()
 	{
 		glClear(GL_COLOR_BUFFER_BIT);
+		glLoadIdentity();
+		gluOrtho2D(0.0,499.0,0.0,499.0);
 		drawhouse();
 		rotate();
 		drawhouse();
@@ -88,8 +90,6 @@
 		glColor3f(1.0,1.0,0.0);
 		glPointSize(10.0);
 		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		gluOrtho2D(0.0,499.0,0.0,499.0);
 	}
 
 	int main(int argc,char **argv)
